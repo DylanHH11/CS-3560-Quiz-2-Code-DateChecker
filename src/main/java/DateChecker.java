@@ -26,11 +26,6 @@ public class DateChecker {
     };
 
     public boolean has31Days(Month month) {
-        for (Month m : monthThirtyOneDays) {
-            if (m == month) {
-                return true;
-            }
-        }
         return false;
     }
 }
