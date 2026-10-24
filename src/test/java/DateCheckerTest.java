@@ -42,7 +42,7 @@ public class DateCheckerTest {
             names = {"FEBRUARY", "APRIL", "JUNE", "SEPTEMBER", "NOVEMBER"}
     )
     public void testDoesNotHave31Days(DateChecker.Month month) {
-        assertTrue(dateChecker.has31Days(month), month + " should not have 31 days");
+        assertFalse(dateChecker.has31Days(month), month + " should not have 31 days");
     }
 
 }
