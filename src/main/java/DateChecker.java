@@ -14,7 +14,6 @@ public class DateChecker {
         NOVEMBER,
         DECEMBER
     }
-
     // January, March, May, July, August, October, and December
     private DateChecker.Month[] monthThirtyOneDays = {
             Month.JANUARY,
