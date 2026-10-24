@@ -32,10 +32,6 @@ public class DateChecker {
             throw new IllegalArgumentException("Month cannot be null");
         }
 
-        if (Arrays.asList(monthThirtyOneDays).contains(month)) {
-            return true;
-        } else {
-            return false;
-        }
+        return Arrays.asList(monthThirtyOneDays).contains(month);
     }
 }

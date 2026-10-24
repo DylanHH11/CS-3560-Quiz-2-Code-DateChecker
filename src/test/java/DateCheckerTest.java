@@ -10,11 +10,11 @@ public class DateCheckerTest {
 
     @Test
     public void testJanuaryHas31Days() {
-        assertTrue(dateChecker.has31Days(DateChecker.Month.JANUARY));
+        assertTrue(dateChecker.has31Days(DateChecker.Month.JANUARY), "January should have 31 days");
     }
     @Test
     public void testAprilDoesNotHave31Days() {
-        assertFalse(dateChecker.has31Days(DateChecker.Month.APRIL));
+        assertFalse(dateChecker.has31Days(DateChecker.Month.APRIL), "April should not have 31 days");
     }
 
     // to test multiple input values
@@ -31,9 +31,8 @@ public class DateCheckerTest {
             names = {"JANUARY", "MARCH", "MAY", "JULY", "AUGUST", "OCTOBER", "DECEMBER"}
     )
     public void testHas31Days(DateChecker.Month month) {
-        assertTrue(dateChecker.has31Days(month));
+        assertTrue(dateChecker.has31Days(month), month + " should have 31 days");
     }
-
     // Check for months that do not have 31 days, FEBRUARY IS HANDLED HERE
     @ParameterizedTest
     @EnumSource(
