@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DateCheckerTest {
@@ -8,6 +9,10 @@ public class DateCheckerTest {
 
     @Test
     public void testJanuaryHas31Days() {
-        assertTrue(dateChecker.has31Days(DateChecker.Month.JANUARY), "January should have 31 days");
+        assertTrue(dateChecker.has31Days(DateChecker.Month.JANUARY));
+    }
+    @Test
+    public void testAprilDoesNotHave31Days() {
+        assertFalse(dateChecker.has31Days(DateChecker.Month.APRIL));
     }
 }
